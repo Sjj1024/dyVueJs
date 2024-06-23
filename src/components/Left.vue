@@ -128,9 +128,9 @@ function gotoConnect() {
         return
     }
     rnFlag.value = false
-    // let n = window.open(`https://live.douyin.com/${roomNum.value}`, '_blank')
+    let n = window.open(`https://live.douyin.com/${roomNum.value}`, '_blank')
     setTimeout(() => {
-        // n?.close()
+        n?.close()
         roomNum.value &&
             getRoomInfoApi(roomNum.value)
                 .then((res: any) => {
@@ -141,6 +141,7 @@ function gotoConnect() {
                         // 房间ID和uniqueID获取失败
                         connectCode.value = 400
                     } else {
+                        // 连接websocket
                         connection(res.roomId, res.uniqueId)
                     }
                 })
