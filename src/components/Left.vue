@@ -128,9 +128,9 @@ function gotoConnect() {
         return
     }
     rnFlag.value = false
-    let n = window.open(`https://live.douyin.com/${roomNum.value}`, '_blank')
+    // let n = window.open(`https://live.douyin.com/${roomNum.value}`, '_blank')
     setTimeout(() => {
-        n?.close()
+        // n?.close()
         roomNum.value &&
             getRoomInfoApi(roomNum.value)
                 .then((res: any) => {
