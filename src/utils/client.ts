@@ -158,6 +158,7 @@ export class DyClient {
 
     ping() {
         const t = Math.max(1e4, Number(this.heartbeatDuration))
+        console.log('ping 时间是:', t)
         if (this.client && this.client.ready() === 1) {
             const frame = new proto.PushFrame()
             frame.setPayloadtype('hb')

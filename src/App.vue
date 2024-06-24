@@ -10,6 +10,8 @@ import Left from './components/Left.vue'
 import Right from './components/Right.vue'
 import { ref, reactive, provide, readonly } from 'vue'
 
+console.log('proto-------', proto)
+
 /**
  * 输出标签
  * @param tip
@@ -41,11 +43,11 @@ const printSKMCJ = function () {
   `
     console.log(`%c${info}`, `color: #dc6b82`)
 }
-setTimeout(() => {
-    console.clear()
-    printSKMCJ()
-    printInfo()
-}, 1500)
+// setTimeout(() => {
+//     console.clear()
+//     printSKMCJ()
+//     printInfo()
+// }, 1500)
 
 // 弹幕表
 const chatList = reactive<Mess[]>([])
